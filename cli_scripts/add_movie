@@ -1,0 +1,16 @@
+aws rekognition index-faces \
+      --image '{"S3Object":{"Bucket":"ka-movies","Name":"annie2.jpg"}}' \
+      --collection-id "AnnieHall" \
+      --detection-attributes "ALL" \
+      --external-image-id "example-image.jpg" \
+      --region us-east-1 \
+
+
+
+
+
+
+
+aws rekognition list-faces \
+      --collection-id "Godfather" \
+      --region us-east-1
