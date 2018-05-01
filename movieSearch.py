@@ -5,7 +5,7 @@ client = boto3.client('rekognition', 'us-east-1')
 collections = client.list_collections(
     MaxResults=123
 )
-image_to_be_found = 'pacino.jpeg' #keaton.jpg pacino.jpeg
+image_to_be_found = 'pacino.jpeg' #keaton.jpg pacino.jpeg allen.jpg
 for name in collections['CollectionIds']:
     str(name)
     search = client.search_faces_by_image(
