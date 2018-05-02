@@ -7,7 +7,6 @@ collections = client.list_collections(
 )
 image_to_be_found = 'pacino.jpeg' #keaton.jpg pacino.jpeg allen.jpg
 for name in collections['CollectionIds']:
-    str(name)
     search = client.search_faces_by_image(
     CollectionId=str(name),
     Image={ 'S3Object': {'Bucket': bucket,'Name': image_to_be_found}},
